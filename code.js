@@ -8,5 +8,39 @@ console.log(pages[0]);
 
 let endingPages = [4, 9, 13, 17, 19, 20];
 let currentPage = 0;
+let theEnd = ``
 
 // Your Code Here.
+function page(currentPage) {
+    
+    for (let i = 0; i < endingPages.length; i += 1){
+
+    
+    if (currentPage === endingPages[i]){
+    
+         return true
+    }
+}
+
+    return false
+}
+
+while (currentPage !== null){
+    
+    currentPage = prompt(`${pages[currentPage]} \n What page would you like to go to?`)
+    
+    if (currentPage !== null) {
+        
+        currentPage = parseInt(currentPage);
+      }
+      
+      theEnd = theEnd.concat(pages[currentPage] + `<p></p>`)
+      
+      if (page(currentPage) === true ){
+      
+        currentPage = null;
+
+        document.write(`${theEnd} YOUR ADVENTURE ENDS HERE!`)
+      }
+} 
+
